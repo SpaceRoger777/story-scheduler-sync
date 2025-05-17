@@ -2,6 +2,7 @@
 import React from 'react';
 import { Button } from "@/components/ui/button";
 import { Link } from 'react-router-dom';
+import { Settings } from "lucide-react";
 
 const Navbar = () => {
   return (
@@ -19,6 +20,11 @@ const Navbar = () => {
       </div>
       
       <div className="flex items-center space-x-4">
+        <Link to="/settings">
+          <Button variant="ghost" size="icon" className="hidden md:flex">
+            <Settings className="h-5 w-5" />
+          </Button>
+        </Link>
         <Button variant="outline" className="hidden md:flex border-brand-purple text-brand-purple hover:bg-brand-lightPurple">
           Upgrade to Premium
         </Button>
